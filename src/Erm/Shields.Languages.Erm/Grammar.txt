@@ -1,0 +1,14 @@
+﻿WhiteSpace: [\s\n\t ]+;
+S: WhiteSpace?;
+(?<Identifier>): [a-zA-Z]+;
+(?<Cardinality>): '?' / '1' / '*' / '+';
+(?<EntityExpression>): '[' S Identifier S ']';
+(?<RelatedEntityExpression>): '[' S Identifier S '|' S Cardinality S ']';
+(?<RelationshipExpression>): '<' S Identifier S '>';
+(?<RelationshipDeclaration>):
+    (?<Before> (RelatedEntityExpression S)+)
+    RelationshipExpression S
+    (?<After> (RelatedEntityExpression S)+) ';';
+(?<UnionDeclaration>): (?<Base> EntityExpression) S '->' S (?<Derived> (EntityExpression S)+) ';';
+(?<Declaration\rsc>): RelationshipDeclaration / UnionDeclaration;
+(?<Declarations>): S (Declaration S)*;

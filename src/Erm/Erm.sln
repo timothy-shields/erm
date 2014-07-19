@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shields.GraphViz", "Shields.GraphViz\Shields.GraphViz.csproj", "{2ECA80BA-ECE6-47AD-91A7-0DF14FDCDE7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shields.Languages.Erm", "Shields.Languages.Erm\Shields.Languages.Erm.csproj", "{1C48BAD5-91E4-4EF8-B091-C02292E45E99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ermc", "ermc\ermc.csproj", "{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ECA80BA-ECE6-47AD-91A7-0DF14FDCDE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ECA80BA-ECE6-47AD-91A7-0DF14FDCDE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ECA80BA-ECE6-47AD-91A7-0DF14FDCDE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ECA80BA-ECE6-47AD-91A7-0DF14FDCDE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C48BAD5-91E4-4EF8-B091-C02292E45E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C48BAD5-91E4-4EF8-B091-C02292E45E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C48BAD5-91E4-4EF8-B091-C02292E45E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C48BAD5-91E4-4EF8-B091-C02292E45E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
