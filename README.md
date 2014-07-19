@@ -30,6 +30,7 @@ The `erm` language is specified by the following grammar, where `Decls` is the r
     Cardinality ::= '?' | '1' | '*' | '+'
     EntityExpr ::= '[' Id ']'
     RelatedEntityExpr ::= '[' Id '|' Cardinality ']'
+    RelationshipExpr ::= '<' Id '>'
     RelationshipDecl ::= RelatedEntityExpr+ RelationshipExpr RelatedEntityExpr+
     UnionDecl ::= EntityExpr '->' EntityExpr+
     Decl ::= RelationshipDecl | UnionDecl
