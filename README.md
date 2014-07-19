@@ -14,9 +14,10 @@ Define an entity-relationship model file like the following.
     [Teacher|*] <Teaches> [Class|1];
     [Class|?] <Requires> [Major|*];
     
-Using the `ermc` compiler, compile and render your model. (Requires [Graphviz](http://www.graphviz.org/) is installed.)
+Let's call it `education.erm`. Using the `ermc` compiler, compile and render your model.
+(Requires [Graphviz](http://www.graphviz.org/) is installed.)
 
-    ermc render -i=example.erm
+    ermc render -i=education.erm
     
 The rendered SVG follows.
 
@@ -24,7 +25,9 @@ The rendered SVG follows.
 
 ## Language Specification
 
-The `erm` language is specified by the following grammar, where `Decls` is the root nonterminal. (Whitespace is not required between tokens, but it is allowed.)
+The `erm` language is specified by the following grammar,
+where `Decls` is the root nonterminal.
+(Whitespace is not required between tokens, but it is allowed.)
 
     Id ::= [a-zA-Z]+
     Cardinality ::= '?' | '1' | '*' | '+'

@@ -1,0 +1,7 @@
+[Person|1] <Attends> [School|*];
+[Person] -> [Student] [Teacher];
+[School|*] <Offers> [Major|*];
+[Student|1] <Studies> [Major|*];
+[Student|+] <Takes> [Class|*];
+[Teacher|*] <Teaches> [Class|1];
+[Class|?] <Requires> [Major|*];
