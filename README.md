@@ -2,7 +2,7 @@
 
 [Graphviz]: (http://www.graphviz.org/)
 
-A tiny language for specifying entity-relationship models.
+A tiny language for concisely specifying entity-relationship models.
 
 ## Example
 
