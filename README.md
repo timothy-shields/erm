@@ -1,8 +1,6 @@
-# erm
-
 [Graphviz]: (http://www.graphviz.org/)
 
-A tiny language for concisely specifying entity-relationship models.
+**erm** is a tiny language for concisely specifying entity-relationship models.
 
 ## Example
 
