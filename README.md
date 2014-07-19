@@ -1,5 +1,7 @@
 # erm
 
+[Graphviz]: (http://www.graphviz.org/)
+
 A tiny language for specifying entity-relationship models.
 
 ## Example
@@ -15,13 +17,16 @@ Define an entity-relationship model file like the following.
     [Class|?] <Requires> [Major|*];
     
 Let's call it `education.erm`. Using the `ermc` compiler, compile and render your model.
-(Requires [Graphviz](http://www.graphviz.org/) is installed.)
 
     ermc render -i=education.erm
     
 The rendered SVG follows.
 
-![example](http://i.imgur.com/4bDvDse.png)
+![education.svg](http://i.imgur.com/4bDvDse.png)
+
+> [Graphviz][] must be installed for `ermc` to perform the rendering.
+> Also, in `ermc.exe.config`, the `graphvizBin` value must be set
+> to the `bin` directory of the [Graphviz][] installation.
 
 ## Language Specification
 
