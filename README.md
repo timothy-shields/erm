@@ -37,7 +37,7 @@ where `Decls` is the root nonterminal.
     EntityExpr ::= '[' Id ']'
     RelatedEntityExpr ::= '[' Id '|' Cardinality ']'
     RelationshipExpr ::= '<' Id '>'
-    RelationshipDecl ::= RelatedEntityExpr+ RelationshipExpr RelatedEntityExpr+
-    UnionDecl ::= EntityExpr '->' EntityExpr+
+    RelationshipDecl ::= RelatedEntityExpr+ RelationshipExpr RelatedEntityExpr+ ';'
+    UnionDecl ::= EntityExpr '->' EntityExpr+ ';'
     Decl ::= RelationshipDecl | UnionDecl
     Decls ::= Decl*
