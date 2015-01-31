@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shields.Erm", "Shields.Erm\Shields.Erm.csproj", "{F5C1524B-154F-4161-B8AC-41FBCA055A44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ermc", "ermc\ermc.csproj", "{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C6A500F5-1576-4222-AF77-898F5CD229A3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5C1524B-154F-4161-B8AC-41FBCA055A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C1524B-154F-4161-B8AC-41FBCA055A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C1524B-154F-4161-B8AC-41FBCA055A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C1524B-154F-4161-B8AC-41FBCA055A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BE9D67-82D9-4FFC-AD2A-537CB05FD131}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
