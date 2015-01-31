@@ -50,11 +50,50 @@ namespace ermc
             }
         }
 
+        public enum Formats
+        {
+            svg,
+            png
+        }
+
         [Verb(Description = "Render an .erm file to a file of the specified format using Graphviz.")]
         public static void Render(
             [Required] string inputErmPath,
-            [DefaultValue(RendererFormats.Svg)] RendererFormats format)
+            [DefaultValue(Formats.svg)] Formats format,
+            [DefaultValue(false)] bool realtime)
         {
+            inputErmPath = Path.GetFullPath(inputErmPath);
+            if (realtime)
+            {
+                using (var watcher = new FileSystemWatcher(Path.GetDirectoryName(inputErmPath), "*.erm"))
+                {
+                    watcher.Changed += (sender, e) =>
+                    {
+                        if (e.FullPath == inputErmPath)
+                        {
+                            try
+                            {
+                                Render(inputErmPath, format, false);
+                            }
+                            catch
+                            {
+                            }
+                        }
+                    };
+                    watcher.EnableRaisingEvents = true;
+                    try
+                    {
+                        Render(inputErmPath, format, false);
+                    }
+                    catch
+                    {
+                    }
+                    Console.WriteLine("Press enter to stop monitoring " + inputErmPath);
+                    Console.ReadLine();
+                    return;
+                }
+            }
+
             var outputPath = Path.ChangeExtension(inputErmPath, format.ToString().ToLower());
 
             var ermParser = new ErmParser();
@@ -67,7 +106,8 @@ namespace ermc
             IRenderer service = new Renderer(graphvizBin);
             using (var fileStream = File.Create(outputPath))
             {
-                service.RunAsync(graph, fileStream, RendererLayouts.Dot, format, CancellationToken.None).Wait();
+                var rendererFormat = (RendererFormats)Enum.Parse(typeof(RendererFormats), format.ToString(), true);
+                service.RunAsync(graph, fileStream, RendererLayouts.Dot, rendererFormat, CancellationToken.None).Wait();
             }
         }
 
